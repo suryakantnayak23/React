@@ -1,0 +1,86 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('360_F_579861052_KjeAAbyaXOBY6JjxMEPBVJypp2KSb59v.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #212529;
+}
+
+.weather-container {
+    max-width: 500px;
+    width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* slightly more transparent black */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #f8f9fa; /* off-white text color */
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: Auto;
+    color: #f8f9fa; /* off-white text color */
+    background-color: rgba(255, 255, 255, 0.1); /* slight background to ensure readability */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none; /* Remove default focus outline */
+}
+
+.form-control::placeholder {
+    color: rgba(248, 249, 250, 0.7); /* Off-white placeholder color */
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1); /* Maintain slight background on focus */
+    color: #f8f9fa; /* Maintain off-white text color on focus */
+}
+
+.btn {
+    width: 250px;
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    color: #f8f9fa; /* off-white text color */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.weather-container h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.weather-container .mt-3 {
+    margin-top: 15px;
+}
+
+.weather-container .mt-4, .weather-container .my-4 {
+    margin-top: 1.5rem !important;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
