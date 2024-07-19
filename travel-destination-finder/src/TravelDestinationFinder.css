@@ -1,0 +1,57 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('pngtree-travel-destination-tropical-cove-in-fiji-image_15958315.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.destination-container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.8); /* semi-transparent white */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.text-danger {
+    color: red;
+}
