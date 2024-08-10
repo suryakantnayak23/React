@@ -11,7 +11,7 @@ const Weather = () => {
     const API_KEY = '4e9fe76498b844543f3ae1cfc70e5224';
 
     const getWeather = async () => {
-        if (city.trim() === '') {
+        if (!city.trim()) {
             setError('Please enter a valid city name');
             setWeather(null);
             return;
@@ -21,28 +21,30 @@ const Weather = () => {
         setError(null);
         setWeather(null);
 
-        try {
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
-            setWeather(response.data);
-            setError(null);
-        } catch (error) {
-            setError('City not found');
-            setWeather(null);
-        } finally {
-            setLoading(false);
+        for (let i = 0; i < 3; i++) { // Retry 3 times
+            try {
+                const response = await axios.get(
+                    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+                );
+                setWeather(response.data);
+                return; // Exit if successful
+            } catch (err) {
+                if (i < 2) { // Don't delay on the last attempt
+                    await new Promise(res => setTimeout(res, 1000)); // 1-second delay between retries
+                } else {
+                    setError('Failed to fetch data after multiple attempts');
+                }
+            }
         }
+
+        setLoading(false); // Stop the loading indicator
     };
 
     const getEmoji = (temp) => {
-        if (temp > 35) {
-            return '🌞'; // Scary-faced sun
-        } else if (temp > 30) {
-            return '😎'; // Happy sun with sunglasses
-        } else if (temp > 20) {
-            return '🌤️'; // Happy sun with cloud
-        } else {
-            return '🌧️'; // Cloud with rain
-        }
+        if (temp > 35) return '🌞';
+        if (temp > 30) return '😎';
+        if (temp > 20) return '🌤️';
+        return '🌧️';
     };
 
     return (
@@ -57,8 +59,9 @@ const Weather = () => {
                     onChange={(e) => setCity(e.target.value)}
                 />
             </div>
-            <button className="btn btn-primary btn-block" onClick={getWeather}>Get Weather</button>
-            {loading && <p className="mt-3">Loading...</p>}
+            <button className="btn btn-primary btn-block" onClick={getWeather}>
+                Get Weather
+            </button>
             {error && <p className="mt-3 text-danger">{error}</p>}
             {weather && (
                 <div className="mt-4">
