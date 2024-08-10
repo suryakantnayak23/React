@@ -1,0 +1,111 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:link:hover, a:visited:hover {
+    text-decoration: none;
+}
+
+/* Header Styles */
+.i-top-header {
+    height: 70px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.46);
+    background-color: #171b1b;
+    background-image: linear-gradient(90deg, #000000 0%, #000000 100%);
+    display: flex;
+    position: relative;
+}
+
+/* Top Section Styles */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Left Section (Logo) */
+.hleft {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hleft .logo {
+    margin-right: 18px;
+    padding-left: 18px;
+}
+
+.hleft .logo img {
+    max-width: 150px;
+    display: block;
+}
+
+.hleft .logo .partner-txt {
+    position: absolute;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #000000;
+    top: 10px;
+}
+
+/* Right Section (Navigation) */
+.hright {
+    display: flex;
+    align-items: center;
+}
+
+.hright ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.hright ul li {
+    margin-left: 45px;
+    position: relative;
+}
+
+.hright ul li:first-child {
+    margin-left: 0;
+}
+
+/* Active and Hover States */
+.hright ul li.active a,
+.hright ul li:hover a {
+    border-top: 6px solid #57b846;
+}
+
+.hright ul li a {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    padding: 20px 0; /* Uniform padding to avoid layout shift */
+    display: inline-block; /* Ensure the link is block-level to prevent text shaking */
+    transition: border-color 0.3s ease; /* Only transition the border color, not padding */
+}
+
+/* Hide Utility Class */
+.hide {
+    display: none !important;
+}
+
+/* Hamburger Menu */
+.hamburger .line {
+    width: 30px;
+    height: 2px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
