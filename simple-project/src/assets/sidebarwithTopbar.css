@@ -1,0 +1,212 @@
+/* Sidebar Styles */
+.sidebar {
+    background-color: #343a40;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    color: white;
+}
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.sidebar-nav a:hover {
+    background-color: #495057;
+}
+
+/* Dropdown container */
+/* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown toggle link */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background-color: #495057;
+    position: absolute;
+    top: 100%; /* Position the dropdown below the toggle link */
+    left: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    z-index: 1;
+    display: none;  /* Hidden by default */
+}
+
+/* Display the dropdown menu when the dropdown is open */
+.dropdown.open .dropdown-menu {
+    display: flex;
+}
+
+/* Dropdown menu items */
+.dropdown-menu a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #6c757d;
+}
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 60px; /* Adjust the width when collapsed */
+}
+
+/* Hide text when collapsed */
+.sidebar .sidebar-nav a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .sidebar-nav a span {
+    margin-left: 8px;
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .sidebar-nav a span {
+    opacity: 0; /* Hide text when collapsed */
+    display: none; /* Ensure that the text does not take up space */
+}
+
+/* Add some padding to the links to center the icons */
+.sidebar .sidebar-nav a {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+/* Custom Styling for the Building Block Icon */
+.building-block-icon {
+    display: flex;
+    align-items: center;
+}
+
+.building-block-icon .react-icons {
+    margin-right: 8px; /* Space between icons */
+}
+
+/* Sidebar Styles */
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.sidebar-nav a:hover {
+    background-color: #495057;
+}
+
+.sidebar.collapsed .sidebar-nav a span {
+    opacity: 0;
+    display: none;
+}
+
+.sidebar .dropdown-menu a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .dropdown-menu a:hover {
+    background-color: #6c757d;
+}
+/* Custom Styling for the Building Block Icon */
+.building-block-icon {
+    display: flex;
+    align-items: center;
+    gap: 2px; /* Set a small gap between the two icons */
+}
+
+.building-block-icon .react-icons {
+    margin-right: 0px; /* Removed margin-right for tighter spacing */
+}
+
+
+.sidebar .sidebar-nav a:hover {
+    background-color: #495057;
+}
+
+.sidebar .dropdown-menu a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .dropdown-menu a:hover {
+    background-color: #6c757d;
+}
+
+/* Adjust the sidebar collapse behavior */
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar.collapsed .sidebar-nav a {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar.collapsed .sidebar-header h5 {
+    display: none;
+}
+
+/* Add styling for the complain management link */
+.complain-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Wave animation for spinner icon */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wave-icon {
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}

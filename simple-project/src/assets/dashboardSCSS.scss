@@ -1,0 +1,124 @@
+.topbar {
+  position: fixed; /* Makes the top bar fixed */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretches the top bar across the full width */
+  background-color: #333; /* Adjust background color */
+  color: white; /* Adjust text color */
+  padding: 10px 20px; /* Add some padding */
+  z-index: 1000; /* Ensures the top bar is above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+}
+.hov-dd:hover,
+.hov-dd:focus {
+  background-color: rgba(0, 0, 0, 0.07);
+     border-radius: 0.3rem !important;
+}
+
+.layout {
+  padding-top: 60px; /* Adjust to match the height of the top bar */
+}
+
+.sidebar {
+  margin-top: 60px; /* Adjust sidebar position below the top bar */
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar.closed {
+  width: 0;
+  overflow: hidden;
+}
+.main-content.expanded{ margin-left: 0;}
+
+//new
+.dashboard-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: #2c3344;
+  transition: left 0.3s ease;
+  z-index: 1040;
+  padding-top: 60px;
+
+  &.expanded {
+    left: 0;
+  }
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #a7b7d7;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  &:hover, &.active {
+    color: white;
+    background: rgba(255,255,255,0.1);
+  }
+}
+
+.sidebar-category {
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.main-content {
+  margin-left: 0;
+  margin-top: 60px;
+  padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+  &.shifted {
+    margin-left: 250px;
+  }
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.brand-logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+@media (max-width: 992px) {
+  .main-content.shifted {
+    margin-left: 0;
+  }
+}
+//new
+// Existing styles...

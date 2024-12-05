@@ -1,0 +1,18 @@
+<!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="200" height="200">-->
+<!--    &lt;!&ndash; Cake Base &ndash;&gt;-->
+<!--    <rect x="8" y="32" width="48" height="20" fill="#d2691e" stroke="#8b4513" stroke-width="2" />-->
+
+<!--    &lt;!&ndash; Frosting &ndash;&gt;-->
+<!--    <path d="M8 32 Q16 24, 24 32 T40 32 T56 32 Q48 24, 40 32 Q32 24, 24 32 Q16 24, 8 32 Z"-->
+<!--          fill="#fffacd" stroke="#f4a460" stroke-width="2" />-->
+
+<!--    &lt;!&ndash; Candles &ndash;&gt;-->
+<!--    <rect x="16" y="14" width="4" height="18" fill="#ff6347" />-->
+<!--    <rect x="30" y="14" width="4" height="18" fill="#ff6347" />-->
+<!--    <rect x="44" y="14" width="4" height="18" fill="#ff6347" />-->
+
+<!--    &lt;!&ndash; Flames &ndash;&gt;-->
+<!--    <path d="M18 12 Q19 10, 20 12 T18 12 Z" fill="yellow" />-->
+<!--    <path d="M32 12 Q33 10, 34 12 T32 12 Z" fill="yellow" />-->
+<!--    <path d="M46 12 Q47 10, 48 12 T46 12 Z" fill="yellow" />-->
+<!--</svg>-->

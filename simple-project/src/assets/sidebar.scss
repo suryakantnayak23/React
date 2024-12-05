@@ -1,0 +1,25 @@
+/* Sidebar nav-link hover effect */
+.nav-link {
+  color: rgba(255, 255, 255, 0.7); /* Off-white when not hovered */
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white; /* Full white on hover */
+  opacity: 1; /* Full opacity on hover */
+}
+
+.nav-link.active {
+  color: white; /* Active state color */
+}
+
+/* For dropdown menu items */
+.dropdown-item {
+  color: rgba(255, 255, 255, 0.7); /* Off-white for dropdown items */
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown-item:hover {
+  color: white; /* Full white on hover for dropdown */
+  opacity: 1; /* Full opacity on hover */
+}
